@@ -247,46 +247,16 @@ The ETL architecture primarily relies on SQL Server Integration Services (SSIS) 
 - **Execution Order:**
   - Sequence and dependencies among packages.
 
-## Error Handling:
-- **Error Codes and Messages:**
-  - List of error codes and corresponding error messages.
-  - Actions to be taken in case of errors.
-- **Logging:**
-  - Description of logging mechanisms and how to interpret log files.
-
 ## Scheduling and Automation:
 - **Job Schedules:**
   - Details on job schedules, frequency, and dependencies.
   - Instructions for manual execution if needed.
-
-## Security:
-- **Authentication:**
-  - Explanation of how SSIS packages authenticate with source and destination systems.
-- **Permissions:**
-  - Documentation on required permissions for package execution.
-
-## Maintenance and Troubleshooting:
-- **Change Log:**
-  - Record of changes made to the ETL process and data warehouse structure.
-- **Troubleshooting Guide:**
-  - Common issues and their resolutions.
-  - Contact information for support.
 
 ## Best Practices:
 - **Coding Standards:**
   - Guidelines followed for SSIS development.
 - **Performance Optimization:**
   - Tips for optimizing both the ETL process and data warehouse performance.
-
-## Version Control:
-- **Version History:**
-  - Record of SSIS package versions, changes to the data warehouse structure, and overall project updates.
-
-## Training Documentation:
-- **User Manuals:**
-  - Guides for end-users or support teams.
-- **Developer Documentation:**
-  - Detailed guides for developers on SSIS development.
 
 ## Conclusion:
 - **Summary:**
