@@ -1,0 +1,2521 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/15/2024 12:16:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ADMIN-PC"
+  DTS:CreatorName="ADMIN-PC\Admin"
+  DTS:DTSID="{561ECAFC-2B07-4C6C-9F58-7B4B23118CF3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{1624CBA9-76EC-46D8-AD9A-ACBDDE7AFDD6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C4F9CE52-94CF-40BA-99BA-39900D1954A3}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\Career\ITP\C9 - DWH\Project\New Microsoft Excel Worksheet.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E20DDF96-FD63-483C-AEE8-A630815F9CA9}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1256"
+          DTS:ConnectionString="E:\Career\ITP\C9 - DWH\Project\New Text Document.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_id"
+              DTS:DTSID="{A3EA7C5E-0C90-457E-81B9-681BCFB65E7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="method_id"
+              DTS:DTSID="{42D29234-0049-4C7C-A361-81AE98E83FC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="6"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cost"
+              DTS:DTSID="{8EADE4CA-7FE1-4A73-9EE5-1A8BEF1EF4F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_id_BK"
+              DTS:DTSID="{C3D1EC60-EFFE-4738-ABF0-BED36AB4CB59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="line_id_BK"
+              DTS:DTSID="{16F9A29F-CEEB-4CBB-B42E-F76E957E5F26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="book_id_BK"
+              DTS:DTSID="{6313DB08-2154-4E14-8B5B-63EB38179EF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_id"
+              DTS:DTSID="{0ADE33EF-47A8-4BB7-95F7-8E4C4BB3FDA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="5"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{D8718090-8620-4BFD-B22C-1F51C15D8D2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderReceivedStatus"
+              DTS:DTSID="{28991ADA-4D75-4189-8424-66D5D31AD56A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderReceivedDate"
+              DTS:DTSID="{205917E1-0008-415D-A1BB-B55B02A58D55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PendingDeliveryStatus"
+              DTS:DTSID="{66CF0A19-8187-4D49-90CD-182499435050}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PendingDeliveryDate"
+              DTS:DTSID="{FB8F6C8D-8C53-4BB8-8C4F-1C65FD9CADC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeliveryInProgressStatus"
+              DTS:DTSID="{E09A0DA6-C4E3-45EE-B679-7F8F55640A41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeliveryInProgressDate"
+              DTS:DTSID="{9E3B32FA-AC52-461B-940A-188270C8174F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeliveredStatus"
+              DTS:DTSID="{E1B878B1-FD92-492D-B6A6-224C1FE3EDCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeliveredDate"
+              DTS:DTSID="{5B9CA195-4D32-48E8-88E8-2967F0CF034E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CancelledStatus"
+              DTS:DTSID="{2E3B3575-CF93-4D10-AF13-F89ED741B5BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CancelledDate"
+              DTS:DTSID="{9B57E5B6-00CD-4895-ADE8-E4578D57620E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReturnedStatus"
+              DTS:DTSID="{A8506CC1-6D6A-406A-8C7E-0F4569112DD5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReturnedDate"
+              DTS:DTSID="{A1DA1AB2-3AA5-4452-A5C7-BAFE67EE9D8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order_date"
+              DTS:DTSID="{2622DD38-D928-40DF-8FE8-FF3AE750B2E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="source_system_code"
+              DTS:DTSID="{B04132FB-8521-4B0E-B9B0-A1655DD6D941}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BK_order_date"
+              DTS:DTSID="{00CCD380-71B3-4734-B9A4-61789E106C79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateSK"
+              DTS:DTSID="{8C57D37A-2272-4997-93CA-8C7151AD4A8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="book_id_SK"
+              DTS:DTSID="{38724063-18F4-4A21-8FAB-E09B03AC5160}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerSK"
+              DTS:DTSID="{80EB56CE-FA0C-4E58-BA11-AB3634CA4666}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="methodSK"
+              DTS:DTSID="{0D04CA78-2958-4852-954B-87DD33EC74FC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{02B11A74-673D-4CDF-B448-70EBE6A9C936}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="last_modified_id_bk">
+      <DTS:VariableValue
+        DTS:DataType="20">10000000000000</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6167F92C-97A9-4703-9A77-E4299DB24F8F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Last_order_id">
+      <DTS:VariableValue
+        DTS:DataType="20">100000000000000000</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DataFlow_FactOrder"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6EB03884-2AB1-4733-9F96-B97DB864775F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DataFlow_FactOrder"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DataFlow_FactOrder\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DataFlow_FactOrder\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\Derived Column.Inputs[Derived Column Input].Columns[order_date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="order_date"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Output].Columns[source_system_code]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Output].Columns[source_system_code]"
+                      name="source_system_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(dt_ui1)1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(dt_ui1)1</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Output].Columns[BK_order_date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Output].Columns[BK_order_date]"
+                      name="BK_order_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)#{Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_date]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)order_date</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DataFlow_FactOrder\LKP_DimBook"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DimBook"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  book_id_SK, book_id_BK FROM DimBook
+WHERE is_current = 1;</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT  book_id_SK, book_id_BK FROM DimBook
+WHERE is_current = 1;) [refTable]
+where [refTable].[book_id_BK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="book_id_SK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="book_id_BK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_id_BK]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DataFlow_FactOrder\LKP_DimBook.Connections[OleDbConnection]"
+                  connectionManagerID="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ADMIN-PC.DWH_Gravity_Books]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DataFlow_FactOrder\LKP_DimBook.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimBook.Inputs[Lookup Input].Columns[book_id_BK]"
+                      cachedDataType="i4"
+                      cachedName="book_id_BK"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_id_BK]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">book_id_BK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimBook.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Match Output].Columns[book_id_SK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Match Output].Columns[book_id_SK]"
+                      name="book_id_SK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">book_id_SK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimBook.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimBook.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DataFlow_FactOrder\LKP_DimCustomer"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DimCustomer"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCustomer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCustomer]) [refTable]
+where [refTable].[customerBK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="customerSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="customerBK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="first_name" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="last_name" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="email" dataType="DT_STR" length="350" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="street_number" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="street_name" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="city" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="country_name" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="address_status" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="system_source_code" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="start_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="end_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="is_current" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="countryBK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="addressBK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="address_statusBK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id_BK]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Connections[OleDbConnection]"
+                  connectionManagerID="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ADMIN-PC.DWH_Gravity_Books]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Inputs[Lookup Input].Columns[Customer_id]"
+                      cachedDataType="i4"
+                      cachedName="Customer_id"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">customerBK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimCustomer.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Match Output].Columns[customerSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Match Output].Columns[customerSK]"
+                      name="customerSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">customerSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimCustomer.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimCustomer.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DataFlow_FactOrder\LKP_DimDate"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_DimDate"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DateSK, Date
+
+FROM DimDate;</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT DateSK, Date
+
+FROM DimDate;) [refTable]
+where [refTable].[Date] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_date]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DataFlow_FactOrder\LKP_DimDate.Connections[OleDbConnection]"
+                  connectionManagerID="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ADMIN-PC.DWH_Gravity_Books]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DataFlow_FactOrder\LKP_DimDate.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimDate.Inputs[Lookup Input].Columns[order_date]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="order_date"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_date]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimDate.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Match Output].Columns[DateSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Match Output].Columns[DateSK]"
+                      name="DateSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DateSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimDate.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_DimDate.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DataFlow_FactOrder\LKP_ShippingMethod"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP_ShippingMethod"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+FROM DimShippingMethod
+WHERE is_current = 1;</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT *
+FROM DimShippingMethod
+WHERE is_current = 1;) [refTable]
+where [refTable].[method_id_BK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="methodSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="method_id_BK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="method_name" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1256"/&gt;&lt;referenceColumn name="source_system_code" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="start_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="end_date" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="is_current" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[method_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Connections[OleDbConnection]"
+                  connectionManagerID="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ADMIN-PC.DWH_Gravity_Books]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Inputs[Lookup Input].Columns[method_id]"
+                      cachedDataType="i4"
+                      cachedName="method_id"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[method_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">method_id_BK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Match Output].Columns[methodSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Match Output].Columns[methodSK]"
+                      name="methodSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">methodSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DataFlow_FactOrder\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactOrder]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DataFlow_FactOrder\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ADMIN-PC.DWH_Gravity_Books]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[source_system_code]"
+                      cachedDataType="ui1"
+                      cachedName="source_system_code"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source_system_code]"
+                      lineageId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Output].Columns[source_system_code]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateSK]"
+                      cachedDataType="i4"
+                      cachedName="DateSK"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateSK]"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Match Output].Columns[DateSK]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerSK]"
+                      cachedDataType="i4"
+                      cachedName="customerSK"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerSK]"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Match Output].Columns[customerSK]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[line_id_BK]"
+                      cachedDataType="i4"
+                      cachedName="line_id_BK"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lineBK]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[line_id_BK]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[book_id_SK]"
+                      cachedDataType="i4"
+                      cachedName="book_id_SK"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[bookSK]"
+                      lineageId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Match Output].Columns[book_id_SK]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[methodSK]"
+                      cachedDataType="i4"
+                      cachedName="methodSK"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shippingMethodSK]"
+                      lineageId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Match Output].Columns[methodSK]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Price]"
+                      cachedDataType="numeric"
+                      cachedName="Price"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[books_price]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cost]"
+                      cachedDataType="numeric"
+                      cachedName="cost"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipping_cost]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[cost]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[order_id_BK]"
+                      cachedDataType="i4"
+                      cachedName="order_id_BK"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[orderBK]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id_BK]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Order_Received_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Order_Received_Date"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderReceivedDate]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Order_Received_Date]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Order_Received_Status]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Order_Received_Status"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderReceived]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Order_Received_Status]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Pending_Delivery_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Pending_Delivery_Date"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PendingDeliveryDate]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pending_Delivery_Date]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Delivery_In_Progress_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Delivery_In_Progress_Date"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeliveryInProgressDate]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivery_In_Progress_Date]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Delivery_In_Progress_Status]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Delivery_In_Progress_Status"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeliveryInProgress]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivery_In_Progress_Status]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Delivered_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Delivered_Date"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeliveredDate]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivered_Date]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Delivered_Status]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Delivered_Status"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Delivered]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivered_Status]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cancelled_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Cancelled_Date"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CancelledDate]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cancelled_Date]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cancelled_Status]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Cancelled_Status"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cancelled]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cancelled_Status]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Returned_Status]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Returned_Status"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Returned]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Returned_Status]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Pending_Delivery_Status]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Pending_Delivery_Status"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PendingDelivery]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pending_Delivery_Status]" />
+                    <inputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Returned_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Returned_Date"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReturnedDate]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Returned_Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_id]"
+                      dataType="i4"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lineBK]"
+                      dataType="i4"
+                      name="lineBK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[bookSK]"
+                      dataType="i4"
+                      name="bookSK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerSK]"
+                      dataType="i4"
+                      name="customerSK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shippingMethodSK]"
+                      dataType="i4"
+                      name="shippingMethodSK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateSK]"
+                      dataType="i4"
+                      name="DateSK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[books_price]"
+                      dataType="numeric"
+                      name="books_price"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipping_cost]"
+                      dataType="numeric"
+                      name="shipping_cost"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderReceivedDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderReceivedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderReceived]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="OrderReceived" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PendingDeliveryDate]"
+                      dataType="dbTimeStamp"
+                      name="PendingDeliveryDate" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeliveryInProgressDate]"
+                      dataType="dbTimeStamp"
+                      name="DeliveryInProgressDate" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeliveryInProgress]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="DeliveryInProgress" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeliveredDate]"
+                      dataType="dbTimeStamp"
+                      name="DeliveredDate" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Delivered]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Delivered" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CancelledDate]"
+                      dataType="dbTimeStamp"
+                      name="CancelledDate" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cancelled]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Cancelled" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReturnedDate]"
+                      dataType="dbTimeStamp"
+                      name="ReturnedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Returned]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Returned" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[source_system_code]"
+                      dataType="ui1"
+                      name="source_system_code" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[created_at]"
+                      dataType="dbTimeStamp"
+                      name="created_at" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[orderBK]"
+                      dataType="i4"
+                      name="orderBK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PendingDelivery]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="PendingDelivery" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DataFlow_FactOrder\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DataFlow_FactOrder\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT
+ co.order_id AS order_id_BK,
+ co.order_date,
+  ol.line_id As line_id_BK,
+  bo.book_id AS book_id_BK,
+  co.customer_id AS Customer_id,
+  co.shipping_method_id AS method_id,
+  shi.cost,
+  ol.Price,
+  osv.*
+
+FROM
+    dbo.cust_order AS co
+
+RIGHT JOIN   dbo.order_line AS ol 
+ON  co.order_id = ol.order_id
+
+LEFT JOIN
+    OrderStatusView AS osv 
+ON co.order_id = osv.order_id
+Join
+    book AS bo
+ON bo.book_id = ol.book_id
+Join
+	shipping_method as shi
+on  shi.method_id = co.shipping_method_id
+
+
+where osv.order_id &gt;?      
+ORDER BY ol.line_id;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{02B11A74-673D-4CDF-B448-70EBE6A9C936};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DataFlow_FactOrder\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{981E0B46-0955-44A7-BAE9-792C19D3C61A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ADMIN-PC.gravity_books]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[method_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[method_id]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[method_id]"
+                      name="method_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[cost]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cost]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[cost]"
+                      name="cost"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id_BK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[order_id_BK]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_id_BK]"
+                      name="order_id_BK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[line_id_BK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[line_id_BK]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[line_id_BK]"
+                      name="line_id_BK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_id_BK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_id_BK]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[book_id_BK]"
+                      name="book_id_BK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_id]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_id]"
+                      name="Customer_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Price]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Price]"
+                      name="Price"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[order_date]"
+                      length="10"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_date]"
+                      name="order_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Order_Received_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Order_Received_Status]"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Order_Received_Status]"
+                      name="Order_Received_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Order_Received_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Order_Received_Date]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Order_Received_Date]"
+                      name="Order_Received_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pending_Delivery_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pending_Delivery_Status]"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pending_Delivery_Status]"
+                      name="Pending_Delivery_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pending_Delivery_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pending_Delivery_Date]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pending_Delivery_Date]"
+                      name="Pending_Delivery_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivery_In_Progress_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivery_In_Progress_Status]"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivery_In_Progress_Status]"
+                      name="Delivery_In_Progress_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivery_In_Progress_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivery_In_Progress_Date]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivery_In_Progress_Date]"
+                      name="Delivery_In_Progress_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivered_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivered_Status]"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivered_Status]"
+                      name="Delivered_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivered_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivered_Date]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Delivered_Date]"
+                      name="Delivered_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cancelled_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cancelled_Status]"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cancelled_Status]"
+                      name="Cancelled_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cancelled_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cancelled_Date]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cancelled_Date]"
+                      name="Cancelled_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Returned_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Returned_Status]"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Returned_Status]"
+                      name="Returned_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Returned_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Returned_Date]"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Returned_Date]"
+                      name="Returned_Date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      dataType="i4"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[method_id]"
+                      dataType="i4"
+                      name="method_id" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cost]"
+                      dataType="numeric"
+                      name="cost"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[order_id_BK]"
+                      dataType="i4"
+                      name="order_id_BK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[line_id_BK]"
+                      dataType="i4"
+                      name="line_id_BK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[book_id_BK]"
+                      dataType="i4"
+                      name="book_id_BK" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_id]"
+                      dataType="i4"
+                      name="Customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
+                      dataType="numeric"
+                      name="Price"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[order_date]"
+                      dataType="wstr"
+                      length="10"
+                      name="order_date" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Order_Received_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Order_Received_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Order_Received_Date]"
+                      dataType="dbTimeStamp"
+                      name="Order_Received_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pending_Delivery_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Pending_Delivery_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pending_Delivery_Date]"
+                      dataType="dbTimeStamp"
+                      name="Pending_Delivery_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivery_In_Progress_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Delivery_In_Progress_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivery_In_Progress_Date]"
+                      dataType="dbTimeStamp"
+                      name="Delivery_In_Progress_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivered_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Delivered_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Delivered_Date]"
+                      dataType="dbTimeStamp"
+                      name="Delivered_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cancelled_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Cancelled_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cancelled_Date]"
+                      dataType="dbTimeStamp"
+                      name="Cancelled_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Returned_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      name="Returned_Status" />
+                    <externalMetadataColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Returned_Date]"
+                      dataType="dbTimeStamp"
+                      name="Returned_Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[order_id_BK]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[order_id_BK]"
+                      name="order_id_BK" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[order_date]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[order_date]"
+                      name="order_date" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[line_id_BK]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[line_id_BK]"
+                      name="line_id_BK" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_id_BK]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[book_id_BK]"
+                      name="book_id_BK" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_id]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_id]"
+                      name="Customer_id" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      name="order_id" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Price]"
+                      dataType="numeric"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Price]"
+                      name="Price"
+                      precision="5"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[method_id]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[method_id]"
+                      name="method_id" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cost]"
+                      dataType="numeric"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cost]"
+                      name="cost"
+                      precision="6"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Order_Received_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Order_Received_Status]"
+                      name="Order_Received_Status" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Order_Received_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Order_Received_Date]"
+                      name="Order_Received_Date" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pending_Delivery_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pending_Delivery_Status]"
+                      name="Pending_Delivery_Status" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pending_Delivery_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pending_Delivery_Date]"
+                      name="Pending_Delivery_Date" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivery_In_Progress_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivery_In_Progress_Status]"
+                      name="Delivery_In_Progress_Status" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivery_In_Progress_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivery_In_Progress_Date]"
+                      name="Delivery_In_Progress_Date" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivered_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivered_Status]"
+                      name="Delivered_Status" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivered_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Delivered_Date]"
+                      name="Delivered_Date" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cancelled_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cancelled_Status]"
+                      name="Cancelled_Status" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cancelled_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cancelled_Date]"
+                      name="Cancelled_Date" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Returned_Status]"
+                      codePage="1256"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Returned_Status]"
+                      name="Returned_Status" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Returned_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Returned_Date]"
+                      name="Returned_Date" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DataFlow_FactOrder.Paths[Derived Column Output]"
+              endId="Package\DataFlow_FactOrder\LKP_DimDate.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DataFlow_FactOrder\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DataFlow_FactOrder.Paths[Lookup Match Output]"
+              endId="Package\DataFlow_FactOrder\LKP_DimCustomer.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DataFlow_FactOrder\LKP_DimBook.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DataFlow_FactOrder.Paths[Lookup Match Output1]"
+              endId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DataFlow_FactOrder\LKP_DimCustomer.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DataFlow_FactOrder.Paths[Lookup Match Output2]"
+              endId="Package\DataFlow_FactOrder\LKP_DimBook.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DataFlow_FactOrder\LKP_DimDate.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DataFlow_FactOrder.Paths[Lookup Match Output3]"
+              endId="Package\DataFlow_FactOrder\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\DataFlow_FactOrder\LKP_ShippingMethod.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DataFlow_FactOrder.Paths[OLE DB Source Output]"
+              endId="Package\DataFlow_FactOrder\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\DataFlow_FactOrder\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\last_modified_id_bk"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FCB287D3-1886-4D98-BB80-5B0ED388416C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="last_modified_id_bk"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}"
+          SQLTask:SqlStatementSource="SELECT last_modified_id_bk FROM Meta_Control_Fact_Order_Load"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="last_modified_id_bk"
+            SQLTask:DtsVariableName="User::last_modified_id_bk" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Last order_id"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{85946447-CA3C-482B-8F8F-511230839A6A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Last order_id"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}"
+          SQLTask:SqlStatementSource="SELECT MAX(orderBK) AS Last_order_id&#xA;FROM FactOrder;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Last_order_id"
+            SQLTask:DtsVariableName="User::Last_order_id" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update_Meta_Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D03E85D8-7530-4D46-B128-B361569177DA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update_Meta_Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1D74B2B3-7A85-440D-88CB-482D382FB7DC}"
+          SQLTask:SqlStatementSource="UPDATE [dbo].[Meta_Control_Fact_Order_Load]&#xA;SET last_modified_id_bk = ?&#xA;, last_load_date = ?&#xA;WHERE orderDetails = &quot;orderDetails&quot;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::Last_order_id"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="131"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CFE56C91-5859-4A6C-A3DE-4F8EFD2BBE44}"
+      DTS:From="Package\last_modified_id_bk"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DataFlow_FactOrder" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{FC9E7B40-4200-4C87-B478-973E77734BCA}"
+      DTS:From="Package\DataFlow_FactOrder"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update Last order_id" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{B9451517-1074-481D-B195-7AE68E3184BB}"
+      DTS:From="Package\Update Last order_id"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Update_Meta_Table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\DataFlow_FactOrder"
+          TopLeft="310.714286375715,84.1176469850914" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\last_modified_id_bk"
+          TopLeft="313.57142923894,19.1176470420662" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="398.742857807327,60.7176470420662">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.3999999430252"
+              Start="0,0"
+              End="0,15.8999999430252">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.8999999430252" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Update Last order_id"
+          TopLeft="314.285714954746,156.764705744943" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="400.30000066523,125.717646985091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.0470587598511"
+              Start="0,0"
+              End="0,23.5470587598511">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5470587598511" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Update_Meta_Table"
+          TopLeft="315.000000670552,230.176470386477" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="399.442857812649,198.364705744943">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.8117646415341"
+              Start="0,0"
+              End="0,24.3117646415341">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.3117646415341" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DataFlow_FactOrder">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\DataFlow_FactOrder\LKP_ShippingMethod"
+          TopLeft="223.571429047353,198.176470432057" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\DataFlow_FactOrder\LKP_DimBook"
+          TopLeft="558.571429760481,182.999999874655" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\DataFlow_FactOrder\LKP_DimDate"
+          TopLeft="540.714286865325,104.764705790523" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DataFlow_FactOrder\OLE DB Source"
+          TopLeft="284.285714890884,37.4705882024497" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\DataFlow_FactOrder\LKP_DimCustomer"
+          TopLeft="436.428572357613,249.529411581046" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DataFlow_FactOrder\Derived Column"
+          TopLeft="533.571429707262,33.6470587940365" />
+        <EdgeLayout
+          Id="Package\DataFlow_FactOrder.Paths[Lookup Match Output]"
+          TopLeft="630.171429760481,224.599999874655">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-110.942857402868,24.9294117063908"
+              Start="0,0"
+              End="-110.942857402868,17.4294117063908">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.46470585319538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.46470585319538"
+                    Point2="0,12.4647058531954"
+                    Point3="-4,12.4647058531954" />
+                  <mssgle:LineSegment
+                    End="-106.942857402868,12.4647058531954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-106.942857402868,12.4647058531954"
+                    Point2="-110.942857402868,12.4647058531954"
+                    Point3="-110.942857402868,16.4647058531954" />
+                  <mssgle:LineSegment
+                    End="-110.942857402868,17.4294117063908" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-103.662815420184,17.4647058531954,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DataFlow_FactOrder.Paths[Derived Column Output]"
+          TopLeft="610.942858286293,75.2470587940365">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.5176469964861"
+              Start="0,0"
+              End="0,22.0176469964861">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.0176469964861" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DataFlow_FactOrder.Paths[OLE DB Source Output]"
+          TopLeft="433.885714890884,56.3588234982431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.6857148163781,0"
+              Start="0,0"
+              End="92.1857148163781,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="92.1857148163781,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="38.092857408189,5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DataFlow_FactOrder.Paths[Lookup Match Output2]"
+          TopLeft="611.914286865325,146.364705790523">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.2571428951559,36.6352940841324"
+              Start="0,0"
+              End="18.2571428951559,29.1352940841324">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.3176470420662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.3176470420662"
+                    Point2="0,18.3176470420662"
+                    Point3="4,18.3176470420662" />
+                  <mssgle:LineSegment
+                    End="14.2571428951559,18.3176470420662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.2571428951559,18.3176470420662"
+                    Point2="18.2571428951559,18.3176470420662"
+                    Point3="18.2571428951559,22.3176470420662" />
+                  <mssgle:LineSegment
+                    End="18.2571428951559,29.1352940841324" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-39.0628152711721,23.3176470420662,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DataFlow_FactOrder.Paths[Lookup Match Output1]"
+          TopLeft="436.428572357613,270.329411581046">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36.05714331026,-51.3529411489887"
+              Start="0,0"
+              End="-28.55714331026,-51.3529411489887">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-14.02857165513,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.02857165513,0"
+                    Point2="-18.02857165513,0"
+                    Point3="-18.02857165513,-4" />
+                  <mssgle:LineSegment
+                    End="-18.02857165513,-47.3529411489887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.02857165513,-47.3529411489887"
+                    Point2="-18.02857165513,-51.3529411489887"
+                    Point3="-22.02857165513,-51.3529411489887" />
+                  <mssgle:LineSegment
+                    End="-28.55714331026,-51.3529411489887" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.21995837388,1,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DataFlow_FactOrder\OLE DB Destination"
+          TopLeft="22.8571429057997,201.588235141961" />
+        <EdgeLayout
+          Id="Package\DataFlow_FactOrder.Paths[Lookup Match Output3]"
+          TopLeft="223.571429047353,220.682352787009">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-30.3142861415533,0"
+              Start="0,0"
+              End="-22.8142861415533,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-22.8142861415533,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-59.5985297895266,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DataFlow_FactOrder\LKP_ShippingMethod">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DataFlow_FactOrder\LKP_DimBook">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DataFlow_FactOrder\LKP_DimDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DataFlow_FactOrder\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DataFlow_FactOrder\LKP_DimCustomer">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DataFlow_FactOrder\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
