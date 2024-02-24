@@ -1,10 +1,8 @@
 # Gravity Books ETL and Data Warehouse Documentation
 
 ## Project Overview:
-- **Introduction:**
-  - Brief description of the Gravity Books ETL and Data Warehouse project.
-  - Purpose and objectives of the project.
-  - Key stakeholders and users.
+Welcome to the Gravity Books Sales ETL and Data Warehouse Project documentation. This initiative aims to transform the existing Gravity Books Sales database into a robust data warehouse, enabling advanced analytics and reporting capabilities. The project involves the use of Extract, Transform, Load (ETL) processes to migrate and transform data, and the implementation of SQL Server Analysis Services (SSAS) to create a cube for in-depth data analysis.
+
 
 ## Data Warehouse Architecture:
 - **Components:**
