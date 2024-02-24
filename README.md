@@ -3,6 +3,45 @@
 ## Project Overview:
 Welcome to the Gravity Books Sales ETL and Data Warehouse Project documentation. This initiative aims to transform the existing Gravity Books Sales database into a robust data warehouse, enabling advanced analytics and reporting capabilities. The project involves the use of Extract, Transform, Load (ETL) processes to migrate and transform data, and the implementation of SQL Server Analysis Services (SSAS) to create a cube for in-depth data analysis.
 
+## Source Database Overview:
+
+### Database Information:
+- **Database Type:**
+  - Describe the type of database used for the Gravity Books Sales source data (e.g., relational database, transactional database).
+
+- **Technology Stack:**
+  - Specify the technologies used in the source database environment.
+
+### Data Structure:
+- **Tables and Entities:**
+  - List key tables in the source database and briefly describe their purposes.
+  - Identify primary entities and relationships within the source data.
+
+- **Schema Design:**
+  - Provide insights into the schema design of the source database.
+  - Mention any normalization or denormalization practices applied.
+
+### Data Extraction Methods:
+- **Extraction Tools:**
+  - Describe the tools or methods used for extracting data from the source database.
+  - Specify any challenges or considerations related to data extraction.
+
+- **Data Quality:**
+  - Discuss data quality in the source database.
+  - Note any data cleansing or preprocessing steps performed during extraction.
+
+### Sample Data:
+- **Data Examples:**
+  - Provide a few examples of typical data records in the source database.
+  - Highlight key fields and their meanings.
+
+### Source Database Schema (if applicable):
+![image](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/628aaf8b-f334-4011-8da4-c0660697f3ba)
+
+The above image provides an overview of the schema structure in the Gravity Books Sales source database, illustrating tables, relationships, and key entities.
+
+Understanding the source database is crucial for designing effective ETL processes and creating a well-structured data warehouse. The information gathered from the source database informs decisions about data transformations, mappings, and optimizations during the ETL process.
+
 
 ## Data Warehouse Architecture:
 ![DWH Schema](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/ed2ce229-0ba8-44c3-b309-cb4fdcb495f3)
