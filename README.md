@@ -182,9 +182,6 @@ Understanding the source database is crucial for designing effective ETL process
 - The **FactOrder** table is positioned at the center, surrounded by dimension tables (**DimOrder, DimBook, DimCustomer, DimDate**).
 - This star schema architecture facilitates efficient querying and data analysis, a common practice in Data Warehousing.
 
-Feel free to explore the individual tables for detailed field descriptions and relationships. If you have any questions or need additional information, please refer to the respective table documentation.
-
-
 ## Reporting and Analytics:
 - **Purpose:**
   - Explanation of how the data warehouse supports reporting and analytics for Gravity Books.
