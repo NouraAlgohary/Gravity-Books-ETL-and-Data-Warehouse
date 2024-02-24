@@ -5,9 +5,8 @@ Welcome to the Gravity Books Sales ETL and Data Warehouse Project documentation.
 
 
 ## Data Warehouse Architecture:
-- **Components:**
-  - Overview of the data warehouse structure and key components.
-  - Mention of any specific tools or technologies used.
+![DWH Schema](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/7adae394-79b4-4c78-b47d-1d8b9a9f6d48)
+
 
 ## Data Modeling:
 - **Entity-Relationship Diagram (ERD):**
