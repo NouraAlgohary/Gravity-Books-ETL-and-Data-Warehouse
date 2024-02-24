@@ -90,20 +90,100 @@ The above image provides an overview of the schema structure in the Gravity Book
 Understanding the source database is crucial for designing effective ETL processes and creating a well-structured data warehouse. The information gathered from the source database informs decisions about data transformations, mappings, and optimizations during the ETL process.
 
 
-## Data Warehouse Architecture:
+## Data Warehouse
+### Data Modeling:
+- **Entity-Relationship Diagram (ERD):**
 ![DWH Schema](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/ed2ce229-0ba8-44c3-b309-cb4fdcb495f3)
 
 
-## Data Modeling:
-- **Entity-Relationship Diagram (ERD):**
-  - Visual representation of the data model.
-  - Explanation of tables, relationships, and key attributes.
+### Schema and Tables:
+#### Tables Overview:
 
-## Schema and Tables:
-- **Table Definitions:**
-  - Detailed information about each table in the data warehouse.
-- **Field Descriptions:**
-  - Definitions of each field, including data types, lengths, and constraints.
+##### DimOrder Table:
+1. **Location:** Top left corner of the image.
+2. **Fields:**
+   - `method_id_SK` (Primary Key)
+   - `method_id_bk` (Business Key)
+   - `method_name`
+   - `source_system_code`
+   - `start_date`
+   - `end_date`
+   - `is_current`
+
+##### FactOrder Table:
+1. **Location:** Center of the image.
+2. **Fields:**
+   - `order_id_SK` (Primary Key)
+   - `line_id` (Business Key)
+   - `order_history_id` (Foreign Key)
+   - `book_id` (Foreign Key)
+   - `customer_id` (Foreign Key)
+   - `shipping_method_id` (Foreign Key)
+   - `order_status_id` (Business Key)
+   - `order_status`
+   - `price`
+   - `shipping_cost`
+   - `source_system_code`
+   - `created_at`
+
+##### DimBook Table:
+1. **Location:** Top right corner.
+2. **Fields:**
+   - `book_id_SK` (Primary Key)
+   - `book_id_BK` (Business Key)
+   - `language_id_BK` (Business Key)
+   - `author_id_BK` (Business Key)
+   - `publisher_id_BK` (Business Key)
+   - `isbn13`
+   - `publication_date`
+   - `num_pages`
+   - `language_name`
+   - `publisher_name`
+   - `author_name`
+   - `source_system_code`
+   - `start_date`
+   - `end_date`
+   - `is_current`
+
+##### DimCustomer Table:
+1. **Location:** Bottom left corner.
+2. **Fields:**
+   - `customer_id_SK` (Primary Key)
+   - `customer_id_BK` (Business Key)
+   - `address_id_BK` (Business Key)
+   - `country_id_BK` (Business Key)
+   - `status_id_BK` (Business Key)
+   - `first_name`
+   - `last_name`
+   - `email`
+   - `country_name`
+   - `street_name`
+   - `city`
+   - `address_status`
+   - `source_system_code`
+   - `start_date`
+   - `end_date`
+   - `is_current`
+
+##### DimDate Table:
+1. **Location:** Bottom right corner.
+2. **Fields:**
+   - `date_Id_SK` (Primary Key)
+   - `year`
+   - `month`
+   - `day`
+   - `start_date`
+   - `end_date`
+   - `is_current`
+
+#### Schema Architecture:
+
+- Each table is connected to the **FactOrder** table via foreign keys, forming a **star schema**.
+- The **FactOrder** table is positioned at the center, surrounded by dimension tables (**DimOrder, DimBook, DimCustomer, DimDate**).
+- This star schema architecture facilitates efficient querying and data analysis, a common practice in Data Warehousing.
+
+Feel free to explore the individual tables for detailed field descriptions and relationships. If you have any questions or need additional information, please refer to the respective table documentation.
+
 
 ## Reporting and Analytics:
 - **Purpose:**
