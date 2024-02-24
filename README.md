@@ -7,10 +7,11 @@ Welcome to the Gravity Books Sales ETL and Data Warehouse Project documentation.
 
 ### Database Information:
 - **Database Type:**
-  - Describe the type of database used for the Gravity Books Sales source data (e.g., relational database, transactional database).
+  - Relational Database (Microsoft SQL Server).
 
 - **Technology Stack:**
-  - Specify the technologies used in the source database environment.
+  - Microsoft SQL Server (2019)
+  - SQL Server Management Studio (SSMS) for database management.
 
 ### Data Structure:
 - **Tables and Entities:**
