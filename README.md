@@ -5,7 +5,7 @@ Welcome to the Gravity Books Sales ETL and Data Warehouse Project documentation.
 
 
 ## Data Warehouse Architecture:
-![DWH Schema](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/7adae394-79b4-4c78-b47d-1d8b9a9f6d48)
+![DWH Schema](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/ed2ce229-0ba8-44c3-b309-cb4fdcb495f3)
 
 
 ## Data Modeling:
