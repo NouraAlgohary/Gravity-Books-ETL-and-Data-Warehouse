@@ -371,15 +371,20 @@ By supporting Excel for data mapping, the Gravity Books data warehouse promotes 
 
      ![Job_DimCustomer](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/b27b458f-48d7-4d8c-916c-263fbc426d76)
 
-
-
-## Best Practices:
-- **Coding Standards:**
-  - Guidelines followed for SSIS development.
-- **Performance Optimization:**
-  - Tips for optimizing both the ETL process and data warehouse performance.
-
 ## Conclusion:
-- **Summary:**
-  - Recap of the key points in the documentation.
-  - Acknowledgments and references.
+
+### Summary:
+
+Embarking on the Gravity Books Data Warehouse project has been a transformative experience, serving as a best practice for delving into the realm of ETL (Extract, Transform, Load) processes. This project encompassed the application of new concepts, including the implementation of an accumulated fact table, a pivotal element in enhancing the data warehousing architecture.
+
+The journey unfolded systematically, commencing with the design phase where the data warehouse structure took shape. Utilizing MS SQL Server for schema design and SSIS for ETL processes, the project seamlessly transitioned from conception to execution. The creation of the accumulated fact table, the adoption of dimensional modeling, and the meticulous application of business rules and data mappings contributed to a robust and efficient data warehouse.
+
+### Acknowledgments and References:
+
+I would like to express my gratitude to [Mention any mentors, colleagues, or resources] for their invaluable guidance and support throughout the project. Their insights and expertise played a pivotal role in navigating the complexities of ETL development and data warehousing.
+
+References:
+- [How to create job in SQL Server](https://www.youtube.com/watch?v=JcsSZSDlmso&t=956s)
+
+This project has not only expanded my skill set but has also laid a strong foundation for future endeavors in ETL and data warehousing. As I conclude this documentation, I look forward to applying these newfound skills in upcoming projects and further honing my expertise in the dynamic field of data engineering.
+
