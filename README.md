@@ -339,9 +339,7 @@ By supporting Excel for data mapping, the Gravity Books data warehouse promotes 
 ![image](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/79957e97-5a52-4406-9b2a-2b075428cbbe)
 
 ## SSIS Packages:
-- **Package Descriptions:**
-  - Summary of each SSIS package, including its purpose and main functionalities.
-- **Execution Order:**
+- **Package Descriptions and Execution Order:**
   - Sequence and dependencies among packages.
   1. DimBook 
 ![DimBook_ETL](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/6ce245de-ed42-4115-b637-a3ad95dddce3)
