@@ -313,11 +313,9 @@ The ETL architecture primarily relies on SQL Server Integration Services (SSIS) 
    - Document any business rules applied during the transformation process. This ensures that data is not only transformed but also aligned with specific business requirements and logic.
 
 ### Examples of Data Mapping and Business Rules:
+[Mapping File]() By supporting Excel for data mapping, the Gravity Books data warehouse promotes transparency, collaboration, and efficiency in managing the mapping process.
 
-#### Provide concrete examples of data mapping and business rules for a few key scenarios. This can include before-and-after representations of data, showcasing the transformation journey from source to destination.
-
-Including these sections will offer a comprehensive understanding of the data flow, from source systems to the Gravity Books data warehouse, with a focus on the transformations applied along the way.
-
+![image](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/79957e97-5a52-4406-9b2a-2b075428cbbe)
 
 ## SSIS Packages:
 - **Package Descriptions:**
