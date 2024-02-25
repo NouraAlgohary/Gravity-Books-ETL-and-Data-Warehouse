@@ -381,7 +381,7 @@ The journey unfolded systematically, commencing with the design phase where the 
 
 ### Acknowledgments and References:
 
-I would like to express my gratitude to [Mention any mentors, colleagues, or resources] for their invaluable guidance and support throughout the project. Their insights and expertise played a pivotal role in navigating the complexities of ETL development and data warehousing.
+I would like to express my gratitude to Eng. **Abdelwahed**, Eng. **Mohamed Mohsen**, and my colleague **Abdullah** for their invaluable guidance and support throughout the project. Their insights and expertise played a pivotal role in navigating the complexities of ETL development and data warehousing.
 
 References:
 - [How to create job in SQL Server](https://www.youtube.com/watch?v=JcsSZSDlmso&t=956s)
