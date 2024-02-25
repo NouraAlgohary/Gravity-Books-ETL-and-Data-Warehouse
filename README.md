@@ -358,8 +358,20 @@ By supporting Excel for data mapping, the Gravity Books data warehouse promotes 
 
 ## Scheduling and Automation:
 - **Job Schedules:**
-  - Details on job schedules, frequency, and dependencies.
-  - Instructions for manual execution if needed.
+  **Full Data Load:**
+   - **Schedule:** Weekly
+   - **Day:** Sunday
+   - **Time:** 12:00 AM
+   - **Frequency:** Runs weekly to perform a full load of all data from source systems.
+ 
+     ![Job_DimShippingMethod](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/a96ac0e1-6995-4090-ae2a-06d0aefcc930)
+
+      ![Job_DimBook](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/fcd7c8d4-f71c-4a97-9282-ab02032b1dd2)
+
+
+     ![Job_DimCustomer](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/b27b458f-48d7-4d8c-916c-263fbc426d76)
+
+
 
 ## Best Practices:
 - **Coding Standards:**
