@@ -233,13 +233,91 @@ The ETL architecture primarily relies on SQL Server Integration Services (SSIS) 
 
 
 ## Data Flow:
-- **Source Systems:**
-  - Documentation on source systems, including types of data, data formats, and extraction methods.
-- **Destination Systems:**
-  - Documentation on the Gravity Books data warehouse, including data models, schema, and loading mechanisms.
-- **Data Transformation:**
-  - Detailed explanation of data transformations applied.
-  - Examples of data mapping and business rules.
+
+### Source Systems:
+
+#### Documentation on source systems, including:
+
+1. **Sales Data:**
+   - Includes information about book sales, encompassing details such as the book title, quantity sold, price, date of sale, and any associated discounts.
+   - 
+2. **Data Formats:**
+   - database formats
+
+3. **Extraction Methods:**
+   - Data extraction from source systems is facilitated through SQL Server Integration Services (SSIS), a robust ETL tool provided by Microsoft. SSIS supports various extraction methods to acquire data from different sources. The primary extraction methods used in the Gravity Books data flow include:
+
+     1. **SSIS Data Flow Tasks:**
+        - Utilizing SSIS Data Flow Tasks, data is efficiently extracted from source systems. These tasks are configured to connect to different source types, including databases, flat files, and other external sources.
+
+     2. **API Integration:**
+        - SSIS allows integration with APIs, enabling seamless extraction of data from web services or external systems that provide data through API endpoints.
+
+     3. **Direct Database Connections:**
+        - SSIS supports direct connections to various databases, allowing for the extraction of data directly from the source databases. This is particularly useful for real-time or near-real-time data retrieval.
+
+     4. **File Imports:**
+        - For sources providing data in file formats such as CSV, Excel, or XML, SSIS File Connection Managers are employed to import data into the ETL process.
+
+     5. **Custom Scripts:**
+        - In cases where specific extraction logic is required, custom scripts within SSIS packages can be used to tailor the extraction process to unique source system requirements.
+
+### Destination Systems:
+
+#### Documentation on the Gravity Books Data Warehouse:
+
+1. **Data Models:**
+   - The Gravity Books data warehouse is structured around a comprehensive set of data models that facilitate effective analysis and reporting. These models include:
+
+      - **Dimension Tables:**
+         - Dimension tables capture descriptive attributes and provide context to the business data. Examples include tables for authors, publishers, customers, and dates.
+
+      - **Fact Tables:**
+         - Fact tables store the quantitative and measurable metrics of the business. The central fact table, often the "FactOrder" table, contains key performance indicators related to orders and sales.
+
+      - **Star Schema:**
+         - The data models follow a star schema architecture, where the central fact table is connected to multiple dimension tables. This design enhances query performance and simplifies the retrieval of meaningful insights.
+
+      - **Relationships and Keys:**
+         - Relationships between tables are established using primary and foreign keys. This ensures data integrity and allows for the creation of meaningful relationships between different aspects of the business.
+
+2. **Schema:**
+   - The schema design of the Gravity Books data warehouse reflects a meticulous approach to organizing and storing data. Key elements of the schema include:
+
+      - **Table Structures:**
+         - Each table within the data warehouse has a defined structure, outlining the fields and their data types. This clarity aids in understanding the nature of stored information.
+
+      - **Relationships:**
+         - The schema illustrates the relationships between tables, showcasing how dimension tables are linked to the central fact table. This relational structure is crucial for conducting complex analyses.
+
+      - **Design Considerations:**
+         - The schema incorporates considerations for data normalization, ensuring efficient storage and minimizing redundancy. Additionally, it accommodates denormalization where needed for specific reporting requirements.
+
+3. **Loading Mechanisms:**
+   - Loading data into the Gravity Books data warehouse is facilitated through a combination of robust mechanisms, including:
+
+      - **SQL Server Integration Services (SSIS) Packages:**
+         - SSIS packages are employed to automate the extraction, transformation, and loading (ETL) processes. These packages streamline the movement of data from source systems to the data warehouse.
+
+### Data Transformation:
+
+#### Detailed explanation of data transformations applied, including:
+
+1. **Transformations Overview:**
+   - Provide a high-level overview of the types of transformations applied during the ETL process. This might include cleansing, aggregation, data enrichment, etc.
+
+2. **Data Mapping:**
+   - Offer detailed mappings between source and destination fields. This ensures a clear understanding of how data from source systems is transformed and mapped to the data warehouse.
+
+3. **Business Rules:**
+   - Document any business rules applied during the transformation process. This ensures that data is not only transformed but also aligned with specific business requirements and logic.
+
+### Examples of Data Mapping and Business Rules:
+
+#### Provide concrete examples of data mapping and business rules for a few key scenarios. This can include before-and-after representations of data, showcasing the transformation journey from source to destination.
+
+Including these sections will offer a comprehensive understanding of the data flow, from source systems to the Gravity Books data warehouse, with a focus on the transformations applied along the way.
+
 
 ## SSIS Packages:
 - **Package Descriptions:**
