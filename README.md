@@ -250,16 +250,13 @@ The ETL architecture primarily relies on SQL Server Integration Services (SSIS) 
      1. **SSIS Data Flow Tasks:**
         - Utilizing SSIS Data Flow Tasks, data is efficiently extracted from source systems. These tasks are configured to connect to different source types, including databases, flat files, and other external sources.
 
-     2. **API Integration:**
-        - SSIS allows integration with APIs, enabling seamless extraction of data from web services or external systems that provide data through API endpoints.
-
-     3. **Direct Database Connections:**
+     2. **Direct Database Connections:**
         - SSIS supports direct connections to various databases, allowing for the extraction of data directly from the source databases. This is particularly useful for real-time or near-real-time data retrieval.
 
-     4. **File Imports:**
+     3. **File Imports:**
         - For sources providing data in file formats such as CSV, Excel, or XML, SSIS File Connection Managers are employed to import data into the ETL process.
 
-     5. **Custom Scripts:**
+     4. **Custom Scripts:**
         - In cases where specific extraction logic is required, custom scripts within SSIS packages can be used to tailor the extraction process to unique source system requirements.
 
 ### Destination Systems:
@@ -304,16 +301,40 @@ The ETL architecture primarily relies on SQL Server Integration Services (SSIS) 
 #### Detailed explanation of data transformations applied, including:
 
 1. **Transformations Overview:**
-   - Provide a high-level overview of the types of transformations applied during the ETL process. This might include cleansing, aggregation, data enrichment, etc.
+   - **Join Transformations:**
+     - *Purpose:* Combine data from multiple tables based on specified relationships.
+     - *Examples:*
+       - Joining the "book" table with the "author" and "publisher" tables to create a comprehensive book dataset.
+   - **Derivation Transformations:**
+     - *Purpose:* Create derived fields or calculated measures based on existing data.
+     - *Examples:*
+       - Calculating the total cost of an order by combining product prices.
+       - Deriving the age of customers based on their birthdate.
+   - **Dimensional Modeling Transformations:**
+     - *Purpose:* Transform data into a dimensional model for efficient reporting and analytics.
+     - *Examples:*
+       - Structuring data into a star schema model.
+       - Creating dimension and fact tables for a comprehensive data warehouse structure.
 
 2. **Data Mapping:**
    - Offer detailed mappings between source and destination fields. This ensures a clear understanding of how data from source systems is transformed and mapped to the data warehouse.
+   - [here](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/blob/main/Source%20to%20Destination%20Mapping.xlsx) 
 
 3. **Business Rules:**
-   - Document any business rules applied during the transformation process. This ensures that data is not only transformed but also aligned with specific business requirements and logic.
+    1. **Accumulation Logic:**
+       - Define the logic for accumulating values over time. Specify whether the accumulation is based on daily, monthly, or another time granularity. For example, if tracking sales, the accumulation logic might sum daily sales values to represent the cumulative sales for each month.
+    
+    2. **Handling Null or Missing Values:**
+       - Specify how null or missing values are treated during the accumulation process. Determine whether missing values should be ignored, treated as zero, or handled in a specific manner to maintain the accuracy of the accumulated data.
+    
+    3. **Handling Changes in Dimensional Data:**
+       - Address how dimensional changes, such as updates to customer information or product details, are handled in the accumulated fact table. Define rules for managing changes in dimension keys to maintain the historical accuracy of the accumulated data.
+    
+    4. **Effective Dating:**
+       - Implement effective dating to track changes over time. Define how the accumulated fact table captures the effective date ranges for each record, ensuring a clear understanding of when specific values were accumulated.
 
 ### Examples of Data Mapping and Business Rules:
-[Mapping File]() By supporting Excel for data mapping, the Gravity Books data warehouse promotes transparency, collaboration, and efficiency in managing the mapping process.
+By supporting Excel for data mapping, the Gravity Books data warehouse promotes transparency, collaboration, and efficiency in managing the mapping process. 
 
 ![image](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/79957e97-5a52-4406-9b2a-2b075428cbbe)
 
@@ -322,6 +343,20 @@ The ETL architecture primarily relies on SQL Server Integration Services (SSIS) 
   - Summary of each SSIS package, including its purpose and main functionalities.
 - **Execution Order:**
   - Sequence and dependencies among packages.
+  1. DimBook 
+![DimBook_ETL](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/6ce245de-ed42-4115-b637-a3ad95dddce3)
+
+  2. DimCustomer 
+![DimCustomer_ETL](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/d8ecf1e8-91d2-4993-9b90-d1c2b1432fba)
+
+  3. DimShippingMethod
+![DimShippingMethod](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/e003f272-2340-4d58-be65-2e57088c71de)
+
+  4. FactOrder 
+![FactOrder_ControlFlow](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/36815088-09bd-46fc-985b-bfb1541cf844)
+
+![FactOrder_DataFlow](https://github.com/NouraAlgohary/Gravity-Books-ETL-and-Data-Warehouse/assets/103903785/430289c5-f6d9-44d4-927b-2ec3ea0325a8)
+
 
 ## Scheduling and Automation:
 - **Job Schedules:**
